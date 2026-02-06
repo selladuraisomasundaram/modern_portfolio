@@ -1,4 +1,6 @@
+@use "sass:color";
 $primary-color:#444;
+$secondary-color: #eece1a;
 
 * {
     box-sizing:border-box;
@@ -7,8 +9,47 @@ $primary-color:#444;
 body 
 {
     background: $primary-color;
+    color:#fff;
     height:100%;
     margin: 0;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     line-height:1.5;
+}
+
+//headings
+
+h1, h2, h3
+{
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading{
+        font-size:6rem;
+    }
+    &.sm-heading{
+        margin-bottom: 2rem;
+        padding: 0.2rem 1.0rem;
+        background: rgba(color.adjust($primary-color, $lightness: 2%), 0.5);
+    } 
+}
+
+a{
+    color:#fff;
+    text-decoration:none;
+
+}
+
+header{
+    position:fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.text-secondary{
+    color: $secondary-color;
+}
+
+main{
+    padding: 4rem;
+    height: 100%
 }
